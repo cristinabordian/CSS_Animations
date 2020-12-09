@@ -1,0 +1,63 @@
+body {
+    width: 200px;
+    height: 200px;
+    
+
+    margin: 300px auto 0 auto; 
+}
+
+    /* margin: auto e aplicabil doar la blocuri si numai in contextul in care width a fost specificat */
+   
+    /* margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 300px;
+} */
+
+.preloader .large {
+    width: 170px;
+    height: 170px;
+    padding:10px;
+    border: 5px solid green; 
+    border-radius: 100%;
+
+    border-top-color: transparent;
+
+    animation: rotation 10s infinite;
+
+    
+}
+   
+
+
+.preloader .medium {
+    width: 160px;
+    height: 160px;
+    border: 5px solid darkred;
+    border-radius: 100%;
+
+    border-right-color: transparent;
+
+    animation: rotation-back 10s infinite;
+}
+
+/* ad rules */
+
+@keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation-back {
+    from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(-720deg);
+      } 
+
+}
