@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preloader Example in CSS</title>
+    <style>
+     body {
+         background-color: #333;
+     }
+       /* Intrebare: 
+       Distanta body - top =100px (marginea pe verticala se suprapune, marginea lui div castiga asupra marginei lui body de 8px)
+       distanta Body - left =108px (100px dati de marginea lui div + 8px dati de body by default)*/
+     .preloader {
+         width: 200px;
+         height: 200px;
+         background-color: green;
+         margin: 100px;
+     }
+
+     .preloader .square {
+         width: 10px;
+         height: 10px;
+         background-color: darkgreen;
+
+         transform: translateX(-20px) translateY(-20px);
+         animation: travel 20s infinite;
+     }
+
+     @keyframes travel {
+          0% {
+            transform: translateX(-20px) translateY(-20px);
+          }
+
+          25% {
+            transform: translateX(210px) translateY(-20px);
+          }
+
+          50% {
+            transform: translateX(210px) translateY(210px);
+          }
+
+          75% {
+            transform: translateX(-20px) translateY(210px);
+          }
+
+          100% {
+            transform: translateX(-20px) translateY(-20px);
+          }
+     }
+    </style>
+   
+</head>
+<body>
+     <div class="preloader">
+         <div class="square"></div>
+     </div>
+</body>
+</html>
